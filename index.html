@@ -1,1 +1,53 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>낚시</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124239065-3"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-124239065-3');
+    </script>
+    <script>
+        $(document).ready(function() {
+        //<![CDATA[
+        // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+        Kakao.init('4bc3c4fffd942b142ed858fb0138ef95');
+        // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+            Kakao.Link.createDefaultButton({
+                container: '#kakao-link-btn',
+                objectType: 'feed',
+                content: {
+                    title: '기프트콘과 메세지를 보냈습니다.',
+                    description: '[교촌치킨] 교촌오리지날+웨지감자+콜라1.25L',
+                    imageUrl: 'https://tistory2.daumcdn.net/tistory/3041624/skin/images/chicken.jpg',
+                    link: {
+                        mobileWebUrl: 'https://tistory2.daumcdn.net/tistory/3041624/skin/images/padakpadak.html',
+                        webUrl: 'https://tistory2.daumcdn.net/tistory/3041624/skin/images/padakpadak.html'
+                    }
+                },
+                buttons: [
+                    {
+                        title: '선물함으로 가기',
+                        link: {
+                            mobileWebUrl: 'https://tistory2.daumcdn.net/tistory/3041624/skin/images/padakpadak.html',
+                            webUrl: 'https://tistory2.daumcdn.net/tistory/3041624/skin/images/padakpadak.html'
+                        }
+                    }
+                ]
+            });
+        //]]>
+        });
+    </script>
+    <button id="kakao-link-btn">낚으러가기</button>
+</head>
+<body>
+
+</body>
+</html>
